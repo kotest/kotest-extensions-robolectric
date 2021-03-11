@@ -2,7 +2,7 @@
 
 A Kotest extension that allows you to execute tests using Robolectric.
 
-[![Build Status](https://github.com/kotest/kotest-extensions-robolectric/workflows/master/badge.svg)](https://github.com/kotest/kotest-extensions-robolectric/actions)
+[![master](https://github.com/kotest/kotest-extensions-robolectric/actions/workflows/master.yml/badge.svg)](https://github.com/kotest/kotest-extensions-robolectric/actions/workflows/master.yml)
 [<img src="https://img.shields.io/maven-central/v/io.kotest.extensions/kotest-extensions-robolectric.svg?label=latest%20release"/>](http://search.maven.org/#search|ga|1|kotest-extensions-robolectric)
 ![GitHub](https://img.shields.io/github/license/kotest/kotest-extensions-robolectric)
 [![kotest @ kotlinlang.slack.com](https://img.shields.io/static/v1?label=kotlinlang&message=kotest&color=blue&logo=slack)](https://kotlinlang.slack.com/archives/CT0G9SD7Z)
