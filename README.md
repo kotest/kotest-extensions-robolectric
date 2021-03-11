@@ -9,13 +9,4 @@ A Kotest extension that allows you to execute tests using Robolectric.
 [<img src="https://img.shields.io/nexus/s/https/oss.sonatype.org/io.kotest.extensions/kotest-extensions-robolectric.svg?label=latest%20snapshot"/>](https://oss.sonatype.org/content/repositories/snapshots/io/kotest/extensions/kotest-extensions-robolectric/)
 
 
-## Attention: Experimental
-This extension might work for you, and it might not. We're still tweaking with Robolectric, and it isn't completely stable yet.
-
-### Getting started:
-
-Add the `io.kotest:kotest-extensions-robolectric` module to your classpath.
-
-Then register the `RobolectricExtension` extension in your PROJECT config, as it is a `ConstructorExtension`
-
-With that in place, mark any `Spec` with `@RobolectricTest` and you should be good to go.
+Please create issues on the main Kotest repository.
