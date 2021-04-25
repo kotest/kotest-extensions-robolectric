@@ -10,7 +10,7 @@ object Libs {
    }
 
    object Robolectric {
-      private const val version = "4.4"
+      private const val version = "4.5.1"
       const val robolectric = "org.robolectric:robolectric:$version"
    }
 

@@ -2,10 +2,12 @@ package io.kotest.extensions.robolectric
 
 import io.kotest.core.extensions.ConstructorExtension
 import io.kotest.core.extensions.SpecExtension
+import io.kotest.core.spec.AutoScan
 import io.kotest.core.spec.Spec
 import kotlin.reflect.KClass
 import kotlin.reflect.full.findAnnotation
 
+@AutoScan
 class RobolectricExtension : ConstructorExtension, SpecExtension {
    private val containedRobolectricRunner = ContainedRobolectricRunner()
 
