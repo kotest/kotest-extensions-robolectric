@@ -1,6 +1,5 @@
 package io.kotest.extensions.robolectric
 
-import java.lang.reflect.Method
 import org.junit.runners.model.FrameworkMethod
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
@@ -8,6 +7,7 @@ import org.robolectric.internal.bytecode.InstrumentationConfiguration
 import org.robolectric.pluginapi.config.ConfigurationStrategy
 import org.robolectric.plugins.ConfigConfigurer
 import org.robolectric.plugins.HierarchicalConfigurationStrategy
+import java.lang.reflect.Method
 
 internal class ContainedRobolectricRunner(
    private val config: Config?

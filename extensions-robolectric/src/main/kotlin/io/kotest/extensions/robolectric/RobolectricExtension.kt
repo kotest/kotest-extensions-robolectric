@@ -5,9 +5,9 @@ import io.kotest.core.extensions.ConstructorExtension
 import io.kotest.core.extensions.SpecExtension
 import io.kotest.core.spec.AutoScan
 import io.kotest.core.spec.Spec
+import org.robolectric.annotation.Config
 import kotlin.reflect.KClass
 import kotlin.reflect.full.findAnnotation
-import org.robolectric.annotation.Config
 
 @AutoScan
 internal class RobolectricExtension : ConstructorExtension, SpecExtension {

@@ -54,7 +54,7 @@ dependencies {
    implementation(Libs.Android.material)
    implementation(Libs.Android.multidex)
    testImplementation(Libs.Android.testCore)
-   
+
    // Kotest
    testImplementation(project(":extensions-robolectric"))
    implementation(Libs.Kotest.api)

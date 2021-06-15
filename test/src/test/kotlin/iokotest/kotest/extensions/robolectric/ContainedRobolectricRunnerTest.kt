@@ -6,10 +6,9 @@ import androidx.test.core.app.ApplicationProvider
 import io.kotest.core.spec.style.StringSpec
 import io.kotest.extensions.robolectric.RobolectricTest
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNot
 import io.kotest.matchers.shouldNotBe
 
-private class MockApplication: Application()
+private class MockApplication : Application()
 
 @RobolectricTest
 class ContainedRobolectricRunnerDefaultApplicationTest : StringSpec({
@@ -17,7 +16,6 @@ class ContainedRobolectricRunnerDefaultApplicationTest : StringSpec({
       ApplicationProvider.getApplicationContext<Application>()::class shouldBe MainApplication::class
    }
 })
-
 
 @RobolectricTest(application = MockApplication::class)
 class ContainedRobolectricRunnerChangeApplicationTest : StringSpec({
@@ -42,8 +40,9 @@ class ContainedRobolectricRunnerChangeApiLevelKITKATTest : StringSpec({
 
 @RobolectricTest(application = MockApplication::class)
 abstract class ContainedRobolectricRunnerMergeTest : StringSpec()
+
 @RobolectricTest(sdk = Build.VERSION_CODES.O)
-class ContainedRobolectricRunnerMergeApiVersionTest: ContainedRobolectricRunnerMergeTest() {
+class ContainedRobolectricRunnerMergeApiVersionTest : ContainedRobolectricRunnerMergeTest() {
    init {
       "Get the Build.VERSION_CODES.O" {
          Build.VERSION.SDK_INT shouldBe Build.VERSION_CODES.O
@@ -64,4 +63,4 @@ abstract class ContainedRobolectricRunnerMergeOverwriteTest : StringSpec({
 
 @Suppress("ClassName")
 @RobolectricTest(sdk = Build.VERSION_CODES.O_MR1)
-class ContainedRobolectricRunnerMergeOverwriteO_MR1Test: ContainedRobolectricRunnerMergeOverwriteTest()
+class ContainedRobolectricRunnerMergeOverwriteO_MR1Test : ContainedRobolectricRunnerMergeOverwriteTest()
