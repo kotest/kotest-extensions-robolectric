@@ -2,6 +2,7 @@ object Libs {
 
    const val kotlinVersion = "1.4.31"
    const val org = "io.kotest.extensions"
+   const val artifactId = "kotest-extensions-robolectric"
 
    object Kotest {
       private const val version = "4.4.1"
