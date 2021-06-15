@@ -1,1 +1,2 @@
 include ":extensions-robolectric"
+include ':test'

@@ -20,4 +20,12 @@ object Libs {
       const val junit4 = "junit:junit:$version"
    }
 
+   object Android {
+      const val compileSdkVersion = 30
+      const val targetSdkVersion = 30
+      const val minSdkVersion = 14
+      const val appcompat = "androidx.appcompat:appcompat:1.3.0"
+      const val material = "com.google.android.material:material:1.3.0"
+   }
+
 }
