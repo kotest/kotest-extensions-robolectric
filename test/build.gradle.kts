@@ -52,10 +52,9 @@ dependencies {
    // Android
    implementation(Libs.Android.appcompat)
    implementation(Libs.Android.material)
-   implementation("androidx.multidex:multidex:2.0.1")
-   testImplementation("androidx.test:core:1.3.0")
-
-
+   implementation(Libs.Android.multidex)
+   testImplementation(Libs.Android.testCore)
+   
    // Kotest
    testImplementation(project(":extensions-robolectric"))
    implementation(Libs.Kotest.api)

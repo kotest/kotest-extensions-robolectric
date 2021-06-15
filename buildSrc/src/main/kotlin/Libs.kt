@@ -26,6 +26,8 @@ object Libs {
       const val minSdkVersion = 14
       const val appcompat = "androidx.appcompat:appcompat:1.3.0"
       const val material = "com.google.android.material:material:1.3.0"
+      const val multidex = "androidx.multidex:multidex:2.0.1"
+      const val testCore = "androidx.test:core:1.3.0"
    }
 
 }
