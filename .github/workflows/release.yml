@@ -23,7 +23,7 @@ jobs:
                ref: ${{ github.event.inputs.branch }}
 
          -  name: deploy to sonatype
-            run: ./gradlew publish
+            run: ./gradlew :extensions-robolectric:publish
             env:
                RELEASE_VERSION: ${{ github.event.inputs.version }}
                OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
