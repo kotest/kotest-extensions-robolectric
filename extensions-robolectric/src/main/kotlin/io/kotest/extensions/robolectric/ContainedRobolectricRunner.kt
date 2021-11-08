@@ -6,12 +6,11 @@ import org.robolectric.annotation.Config
 import org.robolectric.internal.bytecode.InstrumentationConfiguration
 import org.robolectric.pluginapi.config.ConfigurationStrategy
 import org.robolectric.plugins.ConfigConfigurer
-import org.robolectric.plugins.HierarchicalConfigurationStrategy
 import java.lang.reflect.Method
 
 internal class ContainedRobolectricRunner(
    private val config: Config?
-) : RobolectricTestRunner(PlaceholderTest::class.java) {
+) : RobolectricTestRunner(PlaceholderTest::class.java, injector) {
    private val placeHolderMethod: FrameworkMethod = children[0]
    val sdkEnvironment = getSandbox(placeHolderMethod).also {
       configureSandbox(it, placeHolderMethod)
@@ -34,18 +33,16 @@ internal class ContainedRobolectricRunner(
          .build()
    }
 
-   override fun getConfiguration(method: Method?): ConfigurationStrategy.Configuration {
-      val defaultConfiguration =
-         super.getConfiguration(method) as HierarchicalConfigurationStrategy.ConfigurationImpl
+   override fun getConfig(method: Method?): Config {
+      val defaultConfiguration = injector.getInstance(ConfigurationStrategy::class.java)
+         .getConfig(testClass.javaClass, method)
 
       if (config != null) {
-         val configConfigurer = defaultInjector().build().getInstance(ConfigConfigurer::class.java)
-         val newConfig = configConfigurer.merge(defaultConfiguration[Config::class.java], config)
-
-         defaultConfiguration.put(Config::class.java, newConfig)
+         val configConfigurer = injector.getInstance(ConfigConfigurer::class.java)
+         return configConfigurer.merge(defaultConfiguration[Config::class.java], config)
       }
 
-      return defaultConfiguration
+      return super.getConfig(method)
    }
 
    class PlaceholderTest {
@@ -55,5 +52,9 @@ internal class ContainedRobolectricRunner(
 
       fun bootStrapMethod() {
       }
+   }
+
+   companion object {
+      private val injector = defaultInjector().build()
    }
 }
