@@ -5,13 +5,13 @@ object Libs {
    const val artifactId = "kotest-extensions-robolectric"
 
    object Kotest {
-      private const val version = "4.4.1"
+      private const val version = "4.6.3"
       const val api = "io.kotest:kotest-framework-api:$version"
       const val junit5 = "io.kotest:kotest-runner-junit5-jvm:$version"
    }
 
    object Robolectric {
-      private const val version = "4.5.1"
+      private const val version = "4.6.1"
       const val robolectric = "org.robolectric:robolectric:$version"
    }
 
