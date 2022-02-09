@@ -1,3 +1,8 @@
+# Notice
+This extension is not production-ready and its development is not active.
+Robolectric integration with JUnit5 is hard, and seeing the intrinsics to integrate to Kotest is even harder.
+If a community member wants to step up and keep this repository going, please let us know at our slack channel.
+
 # Kotest Extensions - Robolectric
 
 A Kotest extension that allows you to execute tests using Robolectric.
